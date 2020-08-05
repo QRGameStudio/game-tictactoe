@@ -1,0 +1,55 @@
+:root {
+    --btn-padding: 5px;
+    --clr-p1: red;
+    --clr-p2: green;
+    --crl-win: yellow;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+}
+
+body {
+    background: black;
+    max-width: 20cm;
+    max-height: 20cm;
+    width: 100%;
+    height: 100%;
+}
+
+.btn {
+    --size: calc((100% / 3) - (2 * var(--btn-padding)));
+    margin: var(--btn-padding);
+    width: var(--size);
+    height: calc(var(--size) - 2px);
+    background: white;
+    display: inline-block;
+}
+
+.btn.np:hover {
+    background: gray;
+    cursor: pointer;
+}
+
+.btn.p1 {
+    background: var(--clr-p1);
+}
+
+.btn.p2 {
+    background: var(--clr-p2);
+}
+
+.btn.win {
+    background: var(--crl-win) !important;
+}
