@@ -1,7 +1,7 @@
 function generateFooter() {
     document.querySelectorAll('.qr-footer').forEach(e => e.parentNode.removeChild(e));
     const footer = document.createElement('footer');
-    footer.innerHTML = '<a href="https://qrgamestudio.com/">Made By QRGameStudio</a>';
+    footer.innerHTML = '<a href="http://qrgamestudio.com/">Made By QRGameStudio</a>';
     footer.className = 'qr-footer';
     document.body.appendChild(footer);
 }

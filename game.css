@@ -43,6 +43,10 @@ body {
     display: inline-block;
 }
 
+.btn.np {
+    background: #ddd;
+}
+
 .btn.np:hover {
     background: gray;
     cursor: pointer;
