@@ -1,14 +1,6 @@
-function generateFooter() {
-    document.querySelectorAll('.qr-footer').forEach(e => e.parentNode.removeChild(e));
-    const footer = document.createElement('footer');
-    footer.innerHTML = '<a href="http://qrgamestudio.com/">Made By QRGameStudio</a>';
-    footer.className = 'qr-footer';
-    document.body.appendChild(footer);
-}
-
-function gameInit() {
-    document.body.innerHTML = '';
-    generateFooter();
+function gameEntryPoint() {
+    const content = document.getElementById('game-content');
+    content.innerHTML = '';
 
     let playerTurn = 1;
     let gameFinished = false;
@@ -25,14 +17,14 @@ function gameInit() {
     ]
     for (let i = 0; i < 9; i++) {
         const btn = document.createElement("div");
-        btn.className = 'btn np';
-        document.body.appendChild(btn);
+        btn.className = 'btn b np';
+        content.appendChild(btn);
         btns.push(btn);
 
         btn.onclick = () => {
             if (gameFinished) {
                 // the game is finished, restart
-                gameInit();
+                gameEntryPoint();
                 return;
             }
             if (!btn.classList.contains('np')) {
@@ -76,5 +68,4 @@ function gameInit() {
     }
 }
 
-const gameStart = gameInit;
-window.onload = gameStart;
+window.onload = gameEntryPoint;
