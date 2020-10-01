@@ -1,4 +1,6 @@
 function gameEntryPoint() {
+    new GTheme().apply();
+    document.getElementsByTagName("body").item(0).style.background = "var(--theme-primary)"
     const content = document.getElementById('game-content');
     content.innerHTML = '';
 
